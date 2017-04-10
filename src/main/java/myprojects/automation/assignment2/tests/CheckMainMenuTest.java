@@ -1,13 +1,19 @@
 package myprojects.automation.assignment2.tests;
 
 import myprojects.automation.assignment2.BaseScript;
+import org.openqa.selenium.WebDriver;
 
-public class CheckMainMenuTest extends BaseScript{
+import static myprojects.automation.assignment2.utils.Properties.getBaseAdminUrl;
 
-    public static void main(String[] args) throws InterruptedException {
-       // TODO Script to check Main Menu items
+public class CheckMainMenuTest extends BaseScript
+{
 
-        // WebDriver driver = getDriver();
-        // ...
+    public static void main(String[] args) throws InterruptedException
+    {
+        // TODO Script to check Main Menu items
+
+        WebDriver driver = getDriver();
+        driver.get(getBaseAdminUrl());
+        driver.close();
     }
 }
