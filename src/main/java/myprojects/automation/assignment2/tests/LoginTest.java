@@ -16,18 +16,18 @@ public class LoginTest extends BaseScript {
 
         WebDriver driver = getDriver();
         driver.get(getBaseAdminUrl());
-;
+
         WebElement email= driver.findElement(By.id("email"));
         WebElement passwd = driver.findElement(By.id("passwd"));
         WebElement submit = driver.findElement(By.name("submitLogin"));
-   
+
         email.sendKeys("webinar.test@gmail.com");
         passwd.sendKeys("Xcg7299bnSmMuRLp9ITw");
         submit.click();
 
         (new WebDriverWait(driver, 4))
                 .until(ExpectedConditions.presenceOfElementLocated(By.className("img-thumbnail")));
-        
+
         WebElement user = driver.findElement(By.className("img-thumbnail"));
         user.click();
 
